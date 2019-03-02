@@ -1,1 +1,0 @@
-C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\PruebaTecnica.Windows.csproj;x64
