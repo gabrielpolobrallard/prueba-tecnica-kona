@@ -10,56 +10,53 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>2c926205-748d-4c32-8775-f436d99a5495</PackageIdentityName>
     <PackageIdentityPublisher>CN=java</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.exe">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.exe">
       <PackagePath>PruebaTecnica.Windows.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.27.2\Redist\Debug\x64\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.xr.xml">
       <PackagePath>PruebaTecnica.Windows.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\View\ListaContactos.xbf">
-      <PackagePath>View\ListaContactos.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>

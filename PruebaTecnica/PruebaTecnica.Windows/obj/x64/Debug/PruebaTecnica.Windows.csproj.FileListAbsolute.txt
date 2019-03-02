@@ -1,6 +1,5 @@
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\App.xbf
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\MainPage.xbf
-C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\View\ListaContactos.xbf
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.xr.xml
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.exe
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.pdb
@@ -14,13 +13,9 @@ C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windo
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\App.g.cs
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\MainPage.g.i.cs
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\MainPage.g.cs
-C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\View\ListaContactos.g.i.cs
-C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\View\ListaContactos.g.cs
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\XamlTypeInfo.g.cs
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\App.xaml
-C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\View\ListaContactos.xaml
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\App.xbf
-C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\View\ListaContactos.xbf
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\XamlSaveStateFile.xml
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\MainPage.xaml
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\MainPage.xbf
@@ -39,4 +34,3 @@ C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windo
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\qualifiers.txt.intermediate
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\ProjectArchitectures.txt
-C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\PruebaTecnica.Windows.csprojResolveAssemblyReference.cache

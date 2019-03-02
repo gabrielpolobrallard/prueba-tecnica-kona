@@ -124,29 +124,23 @@ namespace PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[10];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "PruebaTecnica.Converters.GenderConverter";
             _typeNameTable[1] = "Object";
-            _typeNameTable[2] = "PruebaTecnica.MainPage";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[5] = "PruebaTecnica.View.ListaContactos";
-            _typeNameTable[6] = "PruebaTecnica.Common.ObservableDictionary";
-            _typeNameTable[7] = "String";
-            _typeNameTable[8] = "PruebaTecnica.Common.NavigationHelper";
-            _typeNameTable[9] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[2] = "PruebaTecnica.Converters.BoolToVisibilityConverter";
+            _typeNameTable[3] = "PruebaTecnica.Converters.InvertedBoolToVisibilityConverter";
+            _typeNameTable[4] = "PruebaTecnica.MainPage";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "Windows.UI.Xaml.Controls.UserControl";
 
-            _typeTable = new global::System.Type[10];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::PruebaTecnica.Converters.GenderConverter);
             _typeTable[1] = typeof(global::System.Object);
-            _typeTable[2] = typeof(global::PruebaTecnica.MainPage);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[5] = typeof(global::PruebaTecnica.View.ListaContactos);
-            _typeTable[6] = typeof(global::PruebaTecnica.Common.ObservableDictionary);
-            _typeTable[7] = typeof(global::System.String);
-            _typeTable[8] = typeof(global::PruebaTecnica.Common.NavigationHelper);
-            _typeTable[9] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[2] = typeof(global::PruebaTecnica.Converters.BoolToVisibilityConverter);
+            _typeTable[3] = typeof(global::PruebaTecnica.Converters.InvertedBoolToVisibilityConverter);
+            _typeTable[4] = typeof(global::PruebaTecnica.MainPage);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -182,16 +176,9 @@ namespace PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo
         }
 
         private object Activate_0_GenderConverter() { return new global::PruebaTecnica.Converters.GenderConverter(); }
-        private object Activate_2_MainPage() { return new global::PruebaTecnica.MainPage(); }
-        private object Activate_5_ListaContactos() { return new global::PruebaTecnica.View.ListaContactos(); }
-        private object Activate_6_ObservableDictionary() { return new global::PruebaTecnica.Common.ObservableDictionary(); }
-        private void MapAdd_6_ObservableDictionary(object instance, object key, object item)
-        {
-            var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
-            var newKey = (global::System.String)key;
-            var newItem = (global::System.Object)item;
-            collection.Add(newKey, newItem);
-        }
+        private object Activate_2_BoolToVisibilityConverter() { return new global::PruebaTecnica.Converters.BoolToVisibilityConverter(); }
+        private object Activate_3_InvertedBoolToVisibilityConverter() { return new global::PruebaTecnica.Converters.InvertedBoolToVisibilityConverter(); }
+        private object Activate_4_MainPage() { return new global::PruebaTecnica.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -214,50 +201,32 @@ namespace PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo
                 xamlType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  PruebaTecnica.MainPage
-                userType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_2_MainPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 3:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 4:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 5:   //  PruebaTecnica.View.ListaContactos
-                userType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_ListaContactos;
-                userType.AddMemberName("DefaultViewModel");
-                userType.AddMemberName("NavigationHelper");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 6:   //  PruebaTecnica.Common.ObservableDictionary
+            case 2:   //  PruebaTecnica.Converters.BoolToVisibilityConverter
                 userType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_6_ObservableDictionary;
-                userType.SetIsReturnTypeStub();
+                userType.Activator = Activate_2_BoolToVisibilityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  String
+            case 3:   //  PruebaTecnica.Converters.InvertedBoolToVisibilityConverter
+                userType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_3_InvertedBoolToVisibilityConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  PruebaTecnica.MainPage
+                userType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  PruebaTecnica.Common.NavigationHelper
-                userType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 9:   //  Windows.UI.Xaml.DependencyObject
+            case 6:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -265,37 +234,11 @@ namespace PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo
         }
 
 
-        private object get_0_ListaContactos_DefaultViewModel(object instance)
-        {
-            var that = (global::PruebaTecnica.View.ListaContactos)instance;
-            return that.DefaultViewModel;
-        }
-        private object get_1_ListaContactos_NavigationHelper(object instance)
-        {
-            var that = (global::PruebaTecnica.View.ListaContactos)instance;
-            return that.NavigationHelper;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlMember xamlMember = null;
-            global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "PruebaTecnica.View.ListaContactos.DefaultViewModel":
-                userType = (global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PruebaTecnica.View.ListaContactos");
-                xamlMember = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "PruebaTecnica.Common.ObservableDictionary");
-                xamlMember.Getter = get_0_ListaContactos_DefaultViewModel;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "PruebaTecnica.View.ListaContactos.NavigationHelper":
-                userType = (global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PruebaTecnica.View.ListaContactos");
-                xamlMember = new global::PruebaTecnica.PruebaTecnica_Windows_XamlTypeInfo.XamlMember(this, "NavigationHelper", "PruebaTecnica.Common.NavigationHelper");
-                xamlMember.Getter = get_1_ListaContactos_NavigationHelper;
-                xamlMember.SetIsReadOnly();
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
     }

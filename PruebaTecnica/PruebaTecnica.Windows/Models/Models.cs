@@ -1,114 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Globalization;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace PruebaTecnica.Models
 {
+    public enum Gender { Female, Male };
 
+    public enum Title { Madame, Mademoiselle, Miss, Monsieur, Mr, Mrs, Ms };
 
-    public partial class Root
+    public partial struct Postcode
     {
-        [JsonProperty("results")]
-        public List<Result> Results { get; set; }
+        public long? Integer;
+        public string String;
 
-        [JsonProperty("info")]
-        public Info Info { get; set; }
+        public static implicit operator Postcode(long Integer) => new Postcode { Integer = Integer };
+
+        public static implicit operator Postcode(string String) => new Postcode { String = String };
     }
 
-    public partial class Info
+    public static class Serialize
     {
-        [JsonProperty("seed")]
-        public string Seed { get; set; }
-
-        [JsonProperty("results")]
-        public long Results { get; set; }
-
-        [JsonProperty("page")]
-        public long Page { get; set; }
-
-        [JsonProperty("version")]
-        public string Version { get; set; }
-    }
-
-    public partial class Result
-    {
-        [JsonProperty("gender")]
-        public Gender Gender { get; set; }
-
-        [JsonProperty("name")]
-        public Name Name { get; set; }
-
-        [JsonProperty("location")]
-        public Location Location { get; set; }
-
-        [JsonProperty("email")]
-        public string Email { get; set; }
-
-        [JsonProperty("login")]
-        public Login Login { get; set; }
-
-        [JsonProperty("dob")]
-        public Dob Dob { get; set; }
-
-        [JsonProperty("registered")]
-        public Dob Registered { get; set; }
-
-        [JsonProperty("phone")]
-        public string Phone { get; set; }
-
-        [JsonProperty("cell")]
-        public string Cell { get; set; }
-
-        [JsonProperty("id")]
-        public Id Id { get; set; }
-
-        [JsonProperty("picture")]
-        public Picture Picture { get; set; }
-
-        [JsonProperty("nat")]
-        public string Nat { get; set; }
-    }
-
-    public partial class Dob
-    {
-        [JsonProperty("date")]
-        public DateTimeOffset Date { get; set; }
-
-        [JsonProperty("age")]
-        public long Age { get; set; }
-    }
-
-    public partial class Id
-    {
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("value")]
-        public string Value { get; set; }
-    }
-
-    public partial class Location
-    {
-        [JsonProperty("street")]
-        public string Street { get; set; }
-
-        [JsonProperty("city")]
-        public string City { get; set; }
-
-        [JsonProperty("state")]
-        public string State { get; set; }
-
-        [JsonProperty("postcode")]
-        public Postcode Postcode { get; set; }
-
-        [JsonProperty("coordinates")]
-        public Coordinates Coordinates { get; set; }
-
-        [JsonProperty("timezone")]
-        public Timezone Timezone { get; set; }
+        public static string ToJson(this Root self) => JsonConvert.SerializeObject(self, Models.Converter.Settings);
     }
 
     public partial class Coordinates
@@ -120,22 +34,64 @@ namespace PruebaTecnica.Models
         public string Longitude { get; set; }
     }
 
-    public partial class Timezone
+    public partial class Dob
     {
-        [JsonProperty("offset")]
-        public string Offset { get; set; }
+        [JsonProperty("age")]
+        public long Age { get; set; }
 
-        [JsonProperty("description")]
-        public string Description { get; set; }
+        [JsonProperty("date")]
+        public DateTimeOffset Date { get; set; }
+    }
+
+    public partial class Id
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("value")]
+        public string Value { get; set; }
+    }
+
+    public partial class Info
+    {
+        [JsonProperty("page")]
+        public long Page { get; set; }
+
+        [JsonProperty("results")]
+        public long Results { get; set; }
+
+        [JsonProperty("seed")]
+        public string Seed { get; set; }
+
+        [JsonProperty("version")]
+        public string Version { get; set; }
+    }
+
+    public partial class Location
+    {
+        [JsonProperty("city")]
+        public string City { get; set; }
+
+        [JsonProperty("coordinates")]
+        public Coordinates Coordinates { get; set; }
+
+        [JsonProperty("postcode")]
+        public Postcode Postcode { get; set; }
+
+        [JsonProperty("state")]
+        public string State { get; set; }
+
+        [JsonProperty("street")]
+        public string Street { get; set; }
+
+        [JsonProperty("timezone")]
+        public Timezone Timezone { get; set; }
     }
 
     public partial class Login
     {
-        [JsonProperty("uuid")]
-        public Guid Uuid { get; set; }
-
-        [JsonProperty("username")]
-        public string Username { get; set; }
+        [JsonProperty("md5")]
+        public string Md5 { get; set; }
 
         [JsonProperty("password")]
         public string Password { get; set; }
@@ -143,26 +99,29 @@ namespace PruebaTecnica.Models
         [JsonProperty("salt")]
         public string Salt { get; set; }
 
-        [JsonProperty("md5")]
-        public string Md5 { get; set; }
-
         [JsonProperty("sha1")]
         public string Sha1 { get; set; }
 
         [JsonProperty("sha256")]
         public string Sha256 { get; set; }
+
+        [JsonProperty("username")]
+        public string Username { get; set; }
+
+        [JsonProperty("uuid")]
+        public Guid Uuid { get; set; }
     }
 
     public partial class Name
     {
-        [JsonProperty("title")]
-        public Title Title { get; set; }
-
         [JsonProperty("first")]
         public string First { get; set; }
 
         [JsonProperty("last")]
         public string Last { get; set; }
+
+        [JsonProperty("title")]
+        public Title Title { get; set; }
     }
 
     public partial class Picture
@@ -177,17 +136,52 @@ namespace PruebaTecnica.Models
         public Uri Thumbnail { get; set; }
     }
 
-    public enum Gender { Female, Male };
-
-    public enum Title { Madame, Mademoiselle, Miss, Monsieur, Mr, Mrs, Ms };
-
-    public partial struct Postcode
+    public partial class Result
     {
-        public long? Integer;
-        public string String;
+        [JsonProperty("cell")]
+        public string Cell { get; set; }
 
-        public static implicit operator Postcode(long Integer) => new Postcode { Integer = Integer };
-        public static implicit operator Postcode(string String) => new Postcode { String = String };
+        [JsonProperty("dob")]
+        public Dob Dob { get; set; }
+
+        [JsonProperty("email")]
+        public string Email { get; set; }
+
+        [JsonProperty("gender")]
+        public Gender Gender { get; set; }
+
+        [JsonProperty("id")]
+        public Id Id { get; set; }
+
+        [JsonProperty("location")]
+        public Location Location { get; set; }
+
+        [JsonProperty("login")]
+        public Login Login { get; set; }
+
+        [JsonProperty("name")]
+        public Name Name { get; set; }
+
+        [JsonProperty("nat")]
+        public string Nat { get; set; }
+
+        [JsonProperty("phone")]
+        public string Phone { get; set; }
+
+        [JsonProperty("picture")]
+        public Picture Picture { get; set; }
+
+        [JsonProperty("registered")]
+        public Dob Registered { get; set; }
+    }
+
+    public partial class Root
+    {
+        [JsonProperty("info")]
+        public Info Info { get; set; }
+
+        [JsonProperty("results")]
+        public List<Result> Results { get; set; }
     }
 
     public partial class Root
@@ -195,9 +189,24 @@ namespace PruebaTecnica.Models
         public static Root FromJson(string json) => JsonConvert.DeserializeObject<Root>(json, Models.Converter.Settings);
     }
 
-    public static class Serialize
+    public class RootDTO
     {
-        public static string ToJson(this Root self) => JsonConvert.SerializeObject(self, Models.Converter.Settings);
+        public string Direccion { get; set; }
+
+        [SQLite.AutoIncrement, SQLite.PrimaryKey]
+        public int ID { get; set; }
+
+        public string Imagen { get; set; }
+        public string Name { get; set; }
+    }
+
+    public partial class Timezone
+    {
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("offset")]
+        public string Offset { get; set; }
     }
 
     internal static class Converter
@@ -218,6 +227,8 @@ namespace PruebaTecnica.Models
 
     internal class GenderConverter : JsonConverter
     {
+        public static readonly GenderConverter Singleton = new GenderConverter();
+
         public override bool CanConvert(Type t) => t == typeof(Gender) || t == typeof(Gender?);
 
         public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
@@ -228,6 +239,7 @@ namespace PruebaTecnica.Models
             {
                 case "female":
                     return Gender.Female;
+
                 case "male":
                     return Gender.Male;
             }
@@ -247,18 +259,19 @@ namespace PruebaTecnica.Models
                 case Gender.Female:
                     serializer.Serialize(writer, "female");
                     return;
+
                 case Gender.Male:
                     serializer.Serialize(writer, "male");
                     return;
             }
             throw new Exception("Cannot marshal type Gender");
         }
-
-        public static readonly GenderConverter Singleton = new GenderConverter();
     }
 
     internal class PostcodeConverter : JsonConverter
     {
+        public static readonly PostcodeConverter Singleton = new PostcodeConverter();
+
         public override bool CanConvert(Type t) => t == typeof(Postcode) || t == typeof(Postcode?);
 
         public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
@@ -268,6 +281,7 @@ namespace PruebaTecnica.Models
                 case JsonToken.Integer:
                     var integerValue = serializer.Deserialize<long>(reader);
                     return new Postcode { Integer = integerValue };
+
                 case JsonToken.String:
                 case JsonToken.Date:
                     var stringValue = serializer.Deserialize<string>(reader);
@@ -291,12 +305,12 @@ namespace PruebaTecnica.Models
             }
             throw new Exception("Cannot marshal type Postcode");
         }
-
-        public static readonly PostcodeConverter Singleton = new PostcodeConverter();
     }
 
     internal class TitleConverter : JsonConverter
     {
+        public static readonly TitleConverter Singleton = new TitleConverter();
+
         public override bool CanConvert(Type t) => t == typeof(Title) || t == typeof(Title?);
 
         public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
@@ -307,16 +321,22 @@ namespace PruebaTecnica.Models
             {
                 case "madame":
                     return Title.Madame;
+
                 case "mademoiselle":
                     return Title.Mademoiselle;
+
                 case "miss":
                     return Title.Miss;
+
                 case "monsieur":
                     return Title.Monsieur;
+
                 case "mr":
                     return Title.Mr;
+
                 case "mrs":
                     return Title.Mrs;
+
                 case "ms":
                     return Title.Ms;
             }
@@ -336,37 +356,32 @@ namespace PruebaTecnica.Models
                 case Title.Madame:
                     serializer.Serialize(writer, "madame");
                     return;
+
                 case Title.Mademoiselle:
                     serializer.Serialize(writer, "mademoiselle");
                     return;
+
                 case Title.Miss:
                     serializer.Serialize(writer, "miss");
                     return;
+
                 case Title.Monsieur:
                     serializer.Serialize(writer, "monsieur");
                     return;
+
                 case Title.Mr:
                     serializer.Serialize(writer, "mr");
                     return;
+
                 case Title.Mrs:
                     serializer.Serialize(writer, "mrs");
                     return;
+
                 case Title.Ms:
                     serializer.Serialize(writer, "ms");
                     return;
             }
             throw new Exception("Cannot marshal type Title");
         }
-
-        public static readonly TitleConverter Singleton = new TitleConverter();
-    }
-
-    public class RootDTO
-    {
-        [SQLite.AutoIncrement, SQLite.PrimaryKey]
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Direccion { get; set; }
-        public string Imagen { get; set; }
     }
 }

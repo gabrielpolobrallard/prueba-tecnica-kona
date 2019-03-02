@@ -1,5 +1,4 @@
-﻿
-using PruebaTecnica.Models;
+﻿using PruebaTecnica.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,15 +8,20 @@ namespace PruebaTecnica.DAL
 {
     public static class DataAccess
     {
+        private const string DBNAME = "pruebatecnica.sqlite";
         public static string DBPath { get; set; }
-        //public int CurrentCustomerId { get; set; }
-        const string DBNAME = "pruebatecnica.sqlite";
+        public static void ClearDB()
+        {
+            using (var db = new SQLite.SQLiteConnection(DBPath))
+            {
+                db.Execute("DELETE FROM RootDTO");
+            }
+        }
 
         public static void CreateIfNotExists()
         {
             DBPath = Path.Combine(
                Windows.Storage.ApplicationData.Current.LocalFolder.Path, DBNAME);
-
 
             using (var db = new SQLite.SQLiteConnection(DBPath))
             {
@@ -34,14 +38,11 @@ namespace PruebaTecnica.DAL
             }
             return result;
         }
-
-
         public static string SaveRootDTO(RootDTO rootDTO)
         {
             string result = string.Empty;
             using (var db = new SQLite.SQLiteConnection(DBPath))
             {
-                string change = string.Empty;
                 try
                 {
                     var existingCustomer = (db.Table<RootDTO>().Where(
@@ -72,8 +73,5 @@ namespace PruebaTecnica.DAL
             }
             return result;
         }
-
-
-
     }
 }

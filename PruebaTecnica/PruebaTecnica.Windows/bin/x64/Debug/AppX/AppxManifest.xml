@@ -10,7 +10,7 @@
   <Identity Name="2c926205-748d-4c32-8775-f436d99a5495" Publisher="CN=java" Version="1.0.0.0" ProcessorArchitecture="x64" />
   <Properties>
     <DisplayName>PruebaTecnica.Windows</DisplayName>
-    <PublisherDisplayName>java</PublisherDisplayName>
+    <PublisherDisplayName>Hector Gabriel Polo Brallard</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -24,6 +24,10 @@
     <Application Id="App" Executable="PruebaTecnica.Windows.exe" EntryPoint="PruebaTecnica.Windows.App">
       <m2:VisualElements DisplayName="PruebaTecnica.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="PruebaTecnica.Windows" ForegroundText="light" BackgroundColor="#464646">
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+          <m2:Rotation Preference="landscapeFlipped" />
+        </m2:InitialRotationPreference>
       </m2:VisualElements>
     </Application>
   </Applications>

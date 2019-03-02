@@ -9,36 +9,53 @@
     mc:Ignorable="d">
     <Page.Resources>
         <x:String x:Key="titulo">Prueba Técnica</x:String>
-        <x:Double x:Key="tituloSize">100</x:Double>
+        <x:Double x:Key="tituloSize">50</x:Double>
         <x:String x:Key="guardarButton">Guardar</x:String>
+        <x:String x:Key="tituloBD">Guardados en SQLite</x:String>
+        <x:String x:Key="tituloAPI">Traidos de API</x:String>
+        <x:String x:Key="siguientePagina">Siguiente Pagina</x:String>
+        <x:String x:Key="limpiarBD">Limpiar BD</x:String>
+
         <converters:GenderConverter x:Key="GenderConverter" />
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <converters:InvertedBoolToVisibilityConverter x:Key="InvertedBoolToVisibilityConverter" />
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <Grid>
+        <Grid Margin="10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="100" />
             </Grid.RowDefinitions>
 
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Text="{StaticResource titulo}" FontSize="{StaticResource tituloSize}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center" Text="{StaticResource titulo}" FontSize="{StaticResource tituloSize}" />
+            <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{StaticResource tituloAPI}" FontSize="{StaticResource tituloSize}" />
 
-            <ListView VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Row="1" x:Name="itemListView"
-          ItemsSource="{Binding RootObject.Results}" >
+            <ProgressRing Grid.Column="0" Grid.Row="2" Height="50" Width="50"
+                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                          x:Name="progress1" 
+                          Visibility="Visible" IsActive="{Binding IsLoading}"/>
+            <!--Visibility="{Binding IsLoading , Converter={StaticResource BoolToVisibilityConverter}}"/>-->
+            <ListView Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Stretch"  x:Name="itemListView"
+          ItemsSource="{Binding RootObject.Results}"
+                       Visibility="{Binding IsLoading , Converter={StaticResource InvertedBoolToVisibilityConverter}}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Height="Auto" >
+                        <Grid Height="Auto">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
                                 <Image>
                                     <Image.Source>
-                                        <BitmapImage UriSource="{Binding Picture.medium}"/>
+                                        <BitmapImage UriSource="{Binding Picture.Medium}" />
                                     </Image.Source>
                                 </Image>
                             </Border>
@@ -47,30 +64,30 @@
                                     <TextBlock Text="{Binding Name.First}" TextWrapping="NoWrap" />
                                     <TextBlock Text="{Binding Name.Last}" TextWrapping="NoWrap" Margin="3,0,0,0" />
                                 </StackPanel>
-                                <TextBlock Text="{Binding Gender,Converter={StaticResource GenderConverter}}"  TextWrapping="NoWrap"/>
-                                <TextBlock Text="{Binding Location.Street}"  TextWrapping="NoWrap"/>
-                                <TextBlock Text="{Binding Email}"  MaxHeight="60"/>
+                                <TextBlock Text="{Binding Gender,Converter={StaticResource GenderConverter}}"  TextWrapping="NoWrap" />
+                                <TextBlock Text="{Binding Location.Street}"  TextWrapping="NoWrap" />
+                                <TextBlock Text="{Binding Email}"  MaxHeight="60" />
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button Command="{Binding SaveCommand}" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="Guardar en SQLite"></Button>
+            <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{StaticResource tituloBD}" FontSize="{StaticResource tituloSize}" />
 
-            <ListView DataContext="{Binding RootDTOVm}" VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Row="3" x:Name="itemListViewSQLite"
-          ItemsSource="{Binding RootDTOList}" >
+            <ListView Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center" HorizontalAlignment="Stretch"  x:Name="itemListViewSQLite"
+          ItemsSource="{Binding RootDTOList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Height="Auto" >
+                        <Grid Height="Auto">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
                                 <Image>
                                     <Image.Source>
-                                        <BitmapImage UriSource="{Binding Imagen}"/>
+                                        <BitmapImage UriSource="{Binding Imagen}" />
                                     </Image.Source>
                                 </Image>
                             </Border>
@@ -78,14 +95,17 @@
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{Binding Name}" TextWrapping="NoWrap" />
                                 </StackPanel>
-                                <TextBlock Text="{Binding Direccion}"  TextWrapping="NoWrap"/>
+                                <TextBlock Text="{Binding Direccion}"  TextWrapping="NoWrap" />
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Button Command="{Binding NextPageCommand}"  HorizontalAlignment="Center" VerticalAlignment="Center" Content="{StaticResource siguientePagina}"></Button>
+                <Button Command="{Binding SaveCommand}"  HorizontalAlignment="Center" VerticalAlignment="Center" Content="{StaticResource guardarButton}"></Button>
+                <Button Command="{Binding ClearBDCommand}"  HorizontalAlignment="Center" VerticalAlignment="Center" Content="{StaticResource limpiarBD}"></Button>
+            </StackPanel>
         </Grid>
     </Grid>
-
 </Page>

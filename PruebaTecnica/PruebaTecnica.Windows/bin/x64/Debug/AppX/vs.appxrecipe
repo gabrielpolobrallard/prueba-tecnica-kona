@@ -10,13 +10,13 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>2c926205-748d-4c32-8775-f436d99a5495</PackageIdentityName>
     <PackageIdentityPublisher>CN=java</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>00A9C82310728A3B571A267A337CA7175153ABA16A4E46269BC1DA09DE81826F</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>FC5DEFE7A4B4F44FF58BA9C3E7523A6099195060EF369218D30E1C4095BF7701</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2c926205-748d-4c32-8775-f436d99a5495_1.0.0.0_x64__xdwt0zs16zk9y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2c926205-748d-4c32-8775-f436d99a5495_xdwt0zs16zk9y!App</RegisteredUserModeAppID>
     <RegisteredPackageID>2c926205-748d-4c32-8775-f436d99a5495</RegisteredPackageID>
@@ -25,18 +25,18 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-02T06:06:54.473</Modified>
+      <Modified>2019-03-02T23:23:10.978</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.exe">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.exe">
       <PackagePath>PruebaTecnica.Windows.exe</PackagePath>
-      <Modified>2019-03-02T06:18:36.036</Modified>
+      <Modified>2019-03-02T23:23:10.419</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2018-11-27T21:07:34.000</Modified>
     </AppxPackagedFile>
@@ -44,46 +44,42 @@
       <PackagePath>sqlite3.dll</PackagePath>
       <Modified>2019-03-02T00:11:04.547</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-07T01:01:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-07T01:01:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-07T01:01:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-07T01:01:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.xr.xml">
       <PackagePath>PruebaTecnica.Windows.xr.xml</PackagePath>
-      <Modified>2019-03-02T06:13:17.040</Modified>
+      <Modified>2019-03-02T23:03:19.765</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-02T05:20:44.222</Modified>
+      <Modified>2019-03-02T23:23:10.127</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-02T06:15:42.882</Modified>
+      <Modified>2019-03-02T23:23:10.128</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\View\ListaContactos.xbf">
-      <PackagePath>View\ListaContactos.xbf</PackagePath>
-      <Modified>2019-03-02T05:20:44.224</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\java\Documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-02T06:06:54.268</Modified>
+      <Modified>2019-03-02T23:23:10.881</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
