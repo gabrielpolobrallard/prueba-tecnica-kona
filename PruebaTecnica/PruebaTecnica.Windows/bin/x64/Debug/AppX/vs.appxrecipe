@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-TV0V2U3</Machine>
+    <WindowsUser>java</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>2c926205-748d-4c32-8775-f436d99a5495</PackageIdentityName>
+    <PackageIdentityPublisher>CN=java</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\obj\x64\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <RegisteredManifestChecksum>00A9C82310728A3B571A267A337CA7175153ABA16A4E46269BC1DA09DE81826F</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>2c926205-748d-4c32-8775-f436d99a5495_1.0.0.0_x64__xdwt0zs16zk9y</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>2c926205-748d-4c32-8775-f436d99a5495_xdwt0zs16zk9y!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>2c926205-748d-4c32-8775-f436d99a5495</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=java</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-03-02T06:06:54.473</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.exe">
+      <PackagePath>PruebaTecnica.Windows.exe</PackagePath>
+      <Modified>2019-03-02T06:18:36.036</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2018-11-27T21:07:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.27.2\Redist\Debug\x64\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2019-03-02T00:11:04.547</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T01:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T01:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T01:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T01:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\PruebaTecnica.Windows.xr.xml">
+      <PackagePath>PruebaTecnica.Windows.xr.xml</PackagePath>
+      <Modified>2019-03-02T06:13:17.040</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2019-03-02T05:20:44.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2019-03-02T06:15:42.882</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\View\ListaContactos.xbf">
+      <PackagePath>View\ListaContactos.xbf</PackagePath>
+      <Modified>2019-03-02T05:20:44.224</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\java\documents\Projects\PruebaTecnica\PruebaTecnica\PruebaTecnica.Windows\bin\x64\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-03-02T06:06:54.268</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
